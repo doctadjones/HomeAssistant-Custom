@@ -107,4 +107,3 @@ class TileDeviceTracker(TileEntity, TrackerEntity):
         self._attrs[ATTR_IS_LOST] = self._tile["last_tile_state"]["is_lost"]
         self._attrs[ATTR_RING_STATE] = self._tile["last_tile_state"]["ring_state"]
         self._attrs[ATTR_VOIP_STATE] = self._tile["last_tile_state"]["voip_state"]
-        self._attrs[ATTR_LAST_TIMESTAMP] = self._tile["last_tile_state"]["last_timestamp"]
