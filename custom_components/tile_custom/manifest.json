@@ -1,6 +1,6 @@
 {
-  "domain": "tile",
-  "name": "Tile",
+  "domain": "tile_custom",
+  "name": "Tile Custom",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/tile",
   "requirements": ["pytile==4.0.0"],

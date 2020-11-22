@@ -12,7 +12,7 @@
                     "password": "Password",
                     "username": "Email"
                 },
-                "title": "Configure Tile"
+                "title": "Configure Tile Custom"
             }
         }
     },
@@ -22,7 +22,7 @@
                 "data": {
                     "show_inactive": "Show inactive Tiles"
                 },
-                "title": "Configure Tile"
+                "title": "Configure Tile Custom"
             }
         }
     }

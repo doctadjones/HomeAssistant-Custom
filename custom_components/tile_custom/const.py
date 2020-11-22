@@ -1,7 +1,7 @@
 """Define Tile constants."""
 import logging
 
-DOMAIN = "tile"
+DOMAIN = "tile_custom"
 
 DATA_COORDINATOR = "coordinator"
 

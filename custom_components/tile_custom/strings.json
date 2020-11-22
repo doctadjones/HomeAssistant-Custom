@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Configure Tile",
+        "title": "Configure Tile Custom",
         "data": {
           "username": "[%key:common::config_flow::data::email%]",
           "password": "[%key:common::config_flow::data::password%]"
@@ -19,7 +19,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "Configure Tile",
+        "title": "Configure Tile Custom",
         "data": {
           "show_inactive": "Show inactive Tiles"
         }
