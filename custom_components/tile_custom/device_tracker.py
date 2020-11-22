@@ -18,7 +18,6 @@ ATTR_IS_LOST = "is_lost"
 ATTR_RING_STATE = "ring_state"
 ATTR_VOIP_STATE = "voip_state"
 ATTR_TILE_NAME = "tile_name"
-ATTR_LAST_TIMESTAMP = "last_timestamp"
 
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
