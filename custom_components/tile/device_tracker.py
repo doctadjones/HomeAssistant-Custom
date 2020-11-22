@@ -18,7 +18,8 @@ ATTR_IS_LOST = "is_lost"
 ATTR_RING_STATE = "ring_state"
 ATTR_VOIP_STATE = "voip_state"
 ATTR_TILE_NAME = "tile_name"
-ATTR_TILE_LAST_TIMESTAMP = "tile_last_timestamp"
+ATTR_TILE_LAST_TIMESTAMP = "last_timestamp"
+ATTR_TILE_LAST_TIMESTAMP_EPOCH = "last_timestamp_epoch"
 
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
@@ -128,5 +129,6 @@ class TileDeviceTracker(TileEntity, TrackerEntity):
         self._attrs[ATTR_ALTITUDE] = self._tile["last_tile_state"]["altitude"]
         self._attrs[ATTR_IS_LOST] = self._tile["last_tile_state"]["is_lost"]
         self._attrs[ATTR_RING_STATE] = self._tile["last_tile_state"]["ring_state"]
-        self._attrs[ATTR_VOIP_STATE] = self._tile["last_tile_state"]["altitude"]
-        self._attrs[ATTR_TILE_LAST_TIMESTAMP] = self._tile["last_tile_state"]["timestamp"]
+        self._attrs[ATTR_VOIP_STATE] = self._tile["last_tile_state"]["voip_state"]
+        self._attrs[ATTR_TILE_LAST_TIMESTAMP] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(self._tile["last_tile_state"]["timestamp"]))
+        self._attrs[ATTR_TILE_LAST_TIMESTAMP_EPOCH] = self._tile["last_tile_state"]["timestamp"]
