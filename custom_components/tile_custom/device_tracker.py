@@ -32,28 +32,6 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
         True,
     )
 
-
-async def async_setup_scanner(hass, config, async_see, discovery_info=None):
-    """Detect a legacy configuration and import it."""
-    hass.async_create_task(
-        hass.config_entries.flow.async_init(
-            DOMAIN,
-            context={"source": SOURCE_IMPORT},
-            data={
-                CONF_USERNAME: config[CONF_USERNAME],
-                CONF_PASSWORD: config[CONF_PASSWORD],
-            },
-        )
-    )
-
-    _LOGGER.info(
-        "Your Tile configuration has been imported into the UI; "
-        "please remove it from configuration.yaml"
-    )
-
-    return True
-
-
 class TileDeviceTracker(TileEntity, TrackerEntity):
     """Representation of a network infrastructure device."""
 
@@ -63,7 +41,7 @@ class TileDeviceTracker(TileEntity, TrackerEntity):
         self._name = tile["name"]
         self._tile = tile
         self._tile_uuid = tile_uuid
-        self._unique_id = f"tile_{tile_uuid}"
+        self._unique_id = f"tile_custom_{tile_uuid}"
 
     @property
     def available(self):
