@@ -1,5 +1,5 @@
 """Support for Tile device trackers."""
-import logging
+import logging, time
 
 from homeassistant.components.device_tracker.config_entry import TrackerEntity
 from homeassistant.components.device_tracker.const import SOURCE_TYPE_GPS
