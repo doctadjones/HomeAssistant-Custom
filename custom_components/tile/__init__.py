@@ -46,6 +46,7 @@ async def async_setup_entry(hass, config_entry):
     async def async_update_data():
         """Get new data from the API."""
         try:
+        	LOGGER.info("Getting New Data")
             return await client.tiles.all()
         except SessionExpiredError:
             LOGGER.info("Tile session expired; creating a new one")
